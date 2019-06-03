@@ -1,0 +1,31 @@
+﻿
+@model IEnumerable<IdentityManager.Data.Role>
+@{
+    ViewBag.Title = "Role List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h4>Role List</h4>
+<p>
+    @Html.ActionLink("Add Role", "Add")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Role Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var role in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => role.Name)</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = role.Id }) |
+                    @Html.ActionLink("Delete", "Del", new { id = role.Id }, new { onclick = "return confirm('Are you sure you wish to delete this role?');" }) |
+                    @Html.ActionLink("Add User to Role", "AddUserToRole", new { id = role.Id }) |
+                    @Html.ActionLink("Show Role Users", "ViewRoleUser", new { id = role.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

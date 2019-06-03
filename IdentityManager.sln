@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityManager.WebApp", "IdentityManager.WebApp\IdentityManager.WebApp.csproj", "{851D77C2-02AF-4DBB-A843-0769FACEF058}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityManager.Data", "IdentityManager.Data\IdentityManager.Data.csproj", "{D0460222-10A8-439D-BEFC-5F30440BCEBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{851D77C2-02AF-4DBB-A843-0769FACEF058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851D77C2-02AF-4DBB-A843-0769FACEF058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851D77C2-02AF-4DBB-A843-0769FACEF058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851D77C2-02AF-4DBB-A843-0769FACEF058}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0460222-10A8-439D-BEFC-5F30440BCEBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0460222-10A8-439D-BEFC-5F30440BCEBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0460222-10A8-439D-BEFC-5F30440BCEBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0460222-10A8-439D-BEFC-5F30440BCEBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5EDE4C8-21A4-4AE0-8A01-055A9549029C}
+	EndGlobalSection
+EndGlobal

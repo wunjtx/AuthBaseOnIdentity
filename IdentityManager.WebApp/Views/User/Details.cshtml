@@ -1,0 +1,34 @@
+﻿@model IdentityManager.WebApp.Models.ShowUserViewModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<table class="table">
+    <tbody>
+        <tr>
+            <td>@Html.DisplayFor(m => m.UserName)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayFor(m => m.Email)</td>
+            @if (!Model.EmailConfirmed)
+            {
+            <td>Please Click @Html.ActionLink("here", "ConfirmEmailLink", "User", routeValues: new { userName = Model.UserName }, htmlAttributes: new { title = "ConfirmEmail" }) to Confirm Your Email</td>
+            }
+        </tr>
+        <tr>
+            <td>@Html.DisplayFor(m => m.FBAccount)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayFor(m => m.TwitterAccount)</td>
+        </tr>
+        <tr>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+            </td>
+        </tr>
+    </tbody>
+</table>
+

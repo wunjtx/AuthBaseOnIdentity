@@ -1,0 +1,35 @@
+﻿@model IEnumerable<IdentityManager.WebApp.Models.ShowUserViewModel>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User List</h2>
+
+<p>
+    @Html.ActionLink("添加用户", "Add")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th> @Html.DisplayNameFor(model => model.UserName)</th>
+            <th> @Html.DisplayNameFor(model => model.Email)</th>
+            <th> @Html.DisplayNameFor(model => model.FBAccount)</th>
+            <th> @Html.DisplayNameFor(model => model.TwitterAccount)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(m => user.UserName)</td>
+            <td>@Html.DisplayFor(m => user.Email)</td>
+            <td>@Html.DisplayFor(m => user.FBAccount)</td>
+            <td>@Html.DisplayFor(m => user.TwitterAccount)</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = user.Id }) 
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

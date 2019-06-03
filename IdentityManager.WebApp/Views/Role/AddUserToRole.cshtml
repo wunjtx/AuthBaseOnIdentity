@@ -1,0 +1,37 @@
+﻿@model IEnumerable<IdentityManager.WebApp.Models.ShowUserViewModel>
+@{
+    ViewBag.Title = "AddUserToRole";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Add  User to  @ViewBag.RoleName </h4>
+@{
+    ViewBag.Title = "Role To Users";
+} 
+<p>
+    @Html.ActionLink("Role List", "List")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>FackBook Account</th>
+            <th>Twitter Account</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => user.UserName)</td>
+                <td>@Html.DisplayFor(m => user.Email)</td>
+                <td>@Html.DisplayFor(m => user.FBAccount)</td>
+                <td>@Html.DisplayFor(m => user.TwitterAccount)</td>
+                <td>
+                    @Html.ActionLink("Add User To Role", "AddToRole", new { userId = user.Id, roleId = ViewBag.RoleId, roleName = ViewBag.RoleName })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
