@@ -2,4 +2,4 @@
 
 .Net Identity Demo
 
-implement Email confirmation and Password Change through Email.
+implement Email confirmation and Password Change by Email.
